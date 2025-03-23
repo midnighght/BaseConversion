@@ -13,7 +13,7 @@ public class Main {
         System.out.println(GeneralBaseConvertion("17.352", 8, 16, 5));
         System.out.println(GeneralBaseConvertion("15.4570", 10, 16, 4));
 
-        System.out.println(GeneralBaseConvertion("4H5.4ZG", 35, 27, 8));
+        System.out.println(GeneralBaseConvertion("4H5.4ZG", 35, 27, 6));
     }
 
     private static String GeneralBaseConvertion(String number, int baseOriginal, int baseGoal, int precision) {
