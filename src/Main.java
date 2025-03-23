@@ -1,22 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(GeneralBaseConvertion("1024", 10, 2, 0));
-        System.out.println(GeneralBaseConvertion("357", 10, 8, 0));
-        System.out.println(GeneralBaseConvertion("364253", 10, 16, 0));
+        System.out.println(GeneralBaseConversion("1024", 10, 2, 0));
+        System.out.println(GeneralBaseConversion("357", 10, 8, 0));
+        System.out.println(GeneralBaseConversion("364253", 10, 16, 0));
 
-        System.out.println(GeneralBaseConvertion("58EDD", 16, 10, 0));
-        System.out.println(GeneralBaseConvertion("A1B207", 16, 8, 0));
-        System.out.println(GeneralBaseConvertion("11000110101001", 2, 8, 0));
+        System.out.println(GeneralBaseConversion("58EDD", 16, 10, 0));
+        System.out.println(GeneralBaseConversion("A1B207", 16, 8, 0));
+        System.out.println(GeneralBaseConversion("11000110101001", 2, 8, 0));
 
-        System.out.println(GeneralBaseConvertion("16.233242", 10, 2, 10));
-        System.out.println(GeneralBaseConvertion("17.352", 8, 10, 4));
-        System.out.println(GeneralBaseConvertion("17.352", 8, 16, 5));
-        System.out.println(GeneralBaseConvertion("15.4570", 10, 16, 4));
+        System.out.println(GeneralBaseConversion("16.233242", 10, 2, 10));
+        System.out.println(GeneralBaseConversion("17.352", 8, 10, 4));
+        System.out.println(GeneralBaseConversion("17.352", 8, 16, 5));
+        System.out.println(GeneralBaseConversion("15.4570", 10, 16, 4));
 
-        System.out.println(GeneralBaseConvertion("4H5.4ZG", 35, 27, 6));
+        System.out.println(GeneralBaseConversion("4H5.4ZG", 35, 27, 6));
     }
 
-    private static String GeneralBaseConvertion(String number, int baseOriginal, int baseGoal, int precision) {
+    private static String GeneralBaseConversion(String number, int baseOriginal, int baseGoal, int precision) {
         if (baseOriginal < 2 || baseGoal < 2) {
             return "error de base";
         }
@@ -33,7 +33,7 @@ public class Main {
                 return deleteExtraZero(decToBaseX(baseXToDec(parts[0], baseOriginal), baseGoal));
             }
         } else if (parts.length == 2) {
-            String integerPart = GeneralBaseConvertion(parts[0], baseOriginal, baseGoal, precision);
+            String integerPart = GeneralBaseConversion(parts[0], baseOriginal, baseGoal, precision);
             String fractionalPart;
             if (baseOriginal == 10) {
                 fractionalPart = getFractionalPart(Double.parseDouble(parts[1])/Math.pow(10,parts[1].length()), baseGoal, precision);
